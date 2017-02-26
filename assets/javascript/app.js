@@ -1,14 +1,12 @@
 $(document).ready(function() {
 
-var QuestionsArray = 
-[
-  { name: '1.', image: '../images/vg.jpg' }, 
-  { name: '2.', image: '../images/vg.jpg' }, 
-  { name: '3.', image: '../vg.jpg' },
-  { name: '4.', image: '../vg.jpg' }, 
-  { name: '5.', image: '../vg.jpg' },
+var QuestionsArray = [
+  { name: '1.', image: '../assets/images/vg.jpg' }, 
+  { name: '2', image: '../assets/images/monet.jpg' }, 
+  { name: '3', image: '../assets/images/picasso.jpg' }
+  { name: '4.', image: '../assets/images/caravaggio.jpg'}, 
+  { name: '5.', image: '../assets/images/davinci.jpg' }
 ];
-
 						 
 var answerKey = ["Vincent van Gogh", "Claude Monet", "Pablo Picasso", "Caravaggio", "Leonardo da Vinci"];
 var triviaAnswers = [["Pablo Picasso", "Micelangelo", "Lady GaGa", "Salvador Dali"], ["Andy Warhol", "Rembrandt", "Vincent van Gogh", "Leonardo da Vinci"], ["Paul McCartney", "Vincent van Gogh ", "Michael McDonald", "Rembrandt"], ["Claude Monet", "Rembrandt", "Caravaggio","Vincent van Gogh"], ["Andy Warhol", "Rembrandt", "Vincent van Gogh", "Cassie Simonson"]];
@@ -31,17 +29,14 @@ console.log(a);
     $("#start").on("click", start);
     //  When the stop button gets clicked, run the stop function.
     $("#stop").on("click", stop);
-    //  When the resume button gets clicked, execute the run function.
-   // $("#resume").on("click", run);
-    //  The run function sets an interval
-    //  that runs the decrement function once a second.
+    
     
     function start()
     {
 		$("#start").hide();
 		run();
 		displayQuestions();
-		$("#stop").append($('<input type="button" class="w3-btn w3-round-xlarge" value="STOP">'));
+		$("#stop").append($('<input type="button" value="STOP">'));
 	
 	}
     function run() {
@@ -80,7 +75,7 @@ console.log(a);
  for (var i = 0; i < QuestionsArray.length; i++) 
  	{
 
-   		console.log("about to write the questions");
+   		
    		console.log(QuestionsArray.length);
    		// For each iteration, I will ceate a paragraph
    		var writeQuestion = $("<br><p>" + QuestionsArray[i] + "</p><br>");
@@ -92,9 +87,9 @@ console.log(a);
    		// This data attribute will be set equal to the answers in the triviaAnswers array.
    		writeQuestion.attr("data-questionvalue", answerKey[i]);
 
-   		// Lastly, each <p> (with all it classes and attributes) will get added to the page.
-   		//$("#questions").append(writeQuestion + triviaQuestions[i] + "<br>");
-   		$("#questions").append(writeQuestion);
+   		//  each <p> (with all it classes and attributes) will get added to the page.
+   		$("#questions").append(writeQuestion + QuestionsArray[i] + "<br>");
+   		//$("#questions").append(writeQuestion);
    		//console.log("the answer for the question is " + data-questionvalue);
    		for(var j=0; j<triviaAnswers[i].length; j++)
    			{
@@ -112,11 +107,7 @@ console.log(a);
 	}
 	$(".radio").on("click", checkAnswers);
 }
-    /*$("#radio").change(function(){
-    	var userInput = $("#radio").val();
-    	console.log("I've been clicked.");
-    	console.log(userInput);
-    });*/
+    
     function checkAnswers(){
     //	event.preventDefault();
 
