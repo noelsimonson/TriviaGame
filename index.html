@@ -79,45 +79,49 @@
                 <hr>
                 <p>Guess the artist of the painting before the time runs out. Click the start button to play the Artist Triva Game </p>
 
-                <a href="#game" class="btn btn-primary btn-xl page-scroll">Go to Game</a>
+                <a href="#gameContent" class="btn btn-primary btn-xl page-scroll">Go to Game</a>
 
                 
             </div>
         </div>
     </header>
 
-    <section class="bg-primary" id="game">
-        
-<div class="row">
-            <div class="col-lg-12 text-center">
+
+        <div class="row">
+            <div id="gameContent" class="col-lg-12 text-center">
+            <div id="paintingsLeft" class="col-lg-12 text-center">
+            </div>
                 <h1>Artist Trivia Game</h1>
             <div class="col-sm-12">
       <div id="btnDiv">
-        <button class="w3-btn w3-round-xlarge" id="start">START</button>
+        <button class="w3-btn w3-round-xlarge" id="startButton">START</button>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
       
-      <div class="col-lg-12 text-center" id="timeRemaining"></div>
+      <div class="col-lg-12 text-center" id="description"></div>
     </div>
   </div>
   
   <div class="row">
    
-      <div class="col-lg-12 text-center" id="questions"></div>
+      <div class="col-lg-12 text-center" id="image"></div>
 
-      <div class="col-sm-12 text-center" id="message"></div>
+      <div class="col-sm-12 text-center" id="timer"></div>
     </div>
   </div>
  
     <div class="col-sm-12 text-center"></div>
-      <div id="answers"></div>
+      <div id="answersChoices" <input type='radio' class= 'radio-inline'></div>
     </div>
+    <div class="col-sm-12 text-center"></div>
+    <div id="eventButton"> </div>
+
   </div>
   <div class="col-sm-12"></div>
-   <div class="col-lg-12 text-center" id="btnDiv">
+   <div id="scoreButton" class="col-lg-12 text-center" id="btnDiv">
       
       <div id="stop"></div>
     </div>
@@ -125,14 +129,15 @@
                  </div>
             </div>
     
-        
+
 
 
 
                     <!--<a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
-                </div> -->
+                </div> 
             </div>
         </div>
+       -->
     </section>
 
     
